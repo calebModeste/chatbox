@@ -1,4 +1,4 @@
-<?php session_start()?>
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -45,7 +45,7 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                 echo 'inscription';        
                 $creatUser= $connect->exePrepaQuery($user->createUser(trim($_POST['nom']),trim($_POST['prenom']),trim($_POST['username']),trim($_POST['password'])));
-                $_SESSION['user']=trim($_POST['username']);
+                
                 header('Location: ./index.php');
             }
     

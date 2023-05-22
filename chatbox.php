@@ -1,4 +1,4 @@
-
+<?php session_start()?>
 <!doctype html>
 <html lang="fr">
   <head>
@@ -17,7 +17,7 @@
             <div class="view_chat p-2 m-5 border rounded-top">
                 <div class="chat ">
                     <?php 
-                        $userLock="irho";
+                        $userLock=$_SESSION['user'];
                         
                         if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['message'])) {
                             echo $_GET['subject'],$userLock,$_POST['message'];

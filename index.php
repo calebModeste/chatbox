@@ -43,11 +43,11 @@
 
                 foreach($getuser as $user){
                     if(trim($_POST['usernamelog'])===$user['username'] && md5($_POST['passwordlog'])===$user['password'] ){
+                        $_SESSION['user']=trim($_POST['usernamelog']);
                         header('Location: ./sujetSelection.php');
-                    }
-                    else{
                         
                     }
+                    
                 }
             }
     
