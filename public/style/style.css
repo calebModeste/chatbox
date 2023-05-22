@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    justify-content: center;
+
+}
+
+main .view_chat .chat{
+    border: 1px solid black;
+    height: 80vh;
+    margin-bottom: 5%;
+    overflow-y: scroll;
+}
